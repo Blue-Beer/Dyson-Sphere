@@ -1,0 +1,25 @@
+server:
+  port: 8888
+
+
+spring:
+  application:
+    name: dyson-sphere
+
+
+# mybatis-plus 配置
+mybatis-plus:
+  tenant-enable: ture
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    banner: false
+    db-config:
+      db-type: oracle
+      id-type: auto
+      select-strategy: not_empty
+      insert-strategy: not_empty
+      update-strategy: not_empty
+  configuration:
+    #map-underscore-to-camel-case: true
+    jdbc-type-for-null: 'null'
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
